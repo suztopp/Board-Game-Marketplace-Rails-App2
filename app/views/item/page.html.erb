@@ -1,0 +1,22 @@
+<% @games.each do |game| %>
+    <div class="card" style="width: 18rem;">
+        <%= image_tag game.picture, class:"card-img-top" %>
+            <div class="card-body">
+        
+            <tr>
+                <td><%= game.title %></td>
+                <td><%= game.description %></td>
+                <td><%= game.publication %></td>
+                <p class="card-text">$<%= game.price %>
+                <td><%= game.available %></td>
+                <td><%= game.players %></td>
+                <td><%= game.age_group %></td>
+                <td><%= game.genre %></td>
+                <td><%= link_to 'Show', game %></td>
+                <td><%= link_to 'Edit', edit_game_path(game) %></td>
+                <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+            </div>  
+    </div>
+
+<% end %>

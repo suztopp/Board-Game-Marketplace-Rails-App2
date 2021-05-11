@@ -1,44 +1,55 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @game.title %>
-</p>
+<div class="jumbotron">
+    <div class="row">
+      
+      <div class="col-md-6">
+        <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @game.description %>
-</p>
+        <p>
+          <strong>Title:</strong>
+          <%= @game.title %>
+        </p>
 
-<p>
-  <strong>Publication:</strong>
-  <%= @game.publication %>
-</p>
+        <p>
+          <strong>Description:</strong>
+          <%= @game.description %>
+        </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @game.price %>
-</p>
+        <p>
+          <strong>Publication:</strong>
+          <%= @game.publication %>
+        </p>
 
-<p>
-  <strong>Available:</strong>
-  <%= @game.available %>
-</p>
+        <p>
+          <strong>Price:</strong>
+          <%= @game.price %>
+        </p>
 
-<p>
-  <strong>Players:</strong>
-  <%= @game.players %>
-</p>
+        <p>
+          <strong>Available:</strong>
+          <%= @game.available %>
+        </p>
 
-<p>
-  <strong>Age group:</strong>
-  <%= @game.age_group %>
-</p>
+        <p>
+          <strong>Players:</strong>
+          <%= @game.players %>
+        </p>
 
-<p>
-  <strong>Genre:</strong>
-  <%= @game.genre %>
-</p>
+        <p>
+          <strong>Age group:</strong>
+          <%= @game.age_group %>
+        </p>
+
+        <p>
+          <strong>Genre:</strong>
+          <%= @game.genre %>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <%= image_tag @game.picture, class:"show-picture" %>
+      </div>
+    </div>
+</div>
 
 <%= link_to 'Edit', edit_game_path(@game) %> |
 <%= link_to 'Back', games_path %>
