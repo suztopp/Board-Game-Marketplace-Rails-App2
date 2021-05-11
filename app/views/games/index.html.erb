@@ -2,28 +2,25 @@
 
 <h1>GAMES</h1>
 
-<%= link_to 'New Game', new_game_path %>
-
-
+<%= link_to 'New Game', new_game_path, class:"btn btn-primary btn-lg" %>
+<br><br>
 <div class="row">
     <% @games.each do |game| %>
-    <div class="col">  
-        <div class="card" style="width: 18rem;">
-        <%= image_tag game.picture, class:"card-img-top" %>
-          <div class="card-body">
-            <h3>Title: <%= game.title %></h3>
-            <p>Description: <%= game.description %></p>
-            <p>Price: $<%= game.price %></p>
-            <p>Genre: <%= game.genre %></p>
-            <p><%= link_to 'Show', game %></p>
-            <%= link_to 'Edit', edit_game_path(game) %>
-            <%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %>
-          </div>  
+        <div class="col">  
+            <div class="card" style="width: 18rem;">
+                <%= image_tag game.picture, class:"card-img-top" %>
+                    <div class="card-body">
+                        <h3>Title: <%= game.title %></h3>
+                        <p>Description: <%= game.description %></p>
+                        <p>Price: $<%= game.price %></p>
+                        <p>Genre: <%= game.genre %></p>
+                        <p><%= link_to 'Show', game, class:"btn btn-primary" %></p>
+                        <p><%= link_to 'Edit', edit_game_path(game), class:"btn btn-primary" %></p>
+                    </div>  
+            </div>
         </div>
-    </div>
     <% end %>
 </div>
-
 
 
 

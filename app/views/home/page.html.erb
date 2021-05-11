@@ -1,18 +1,20 @@
-<div class="jumbotron">
-    <div class="row">
-        <div class="col-md-6">
-            <h1 class="display-4">Welcome To....</h1>
-            <h1 class="font-weight-bold">Bored? Games</h1>
-            <p class="lead">Find all kinds of AMAZING games new and old!</p>
-            <hr class="my-4">
-            <p>Have fun!</p>
-            <p class="lead">
-            <%= link_to 'ADD GAME', new_game_path, class:"btn btn-primary btn-lg" %>
-            </p>
-        </div>
-        <div class="col-md-6">
-            <%= image_tag "heroimage", class: "home-image"%>
+<% if user_signed_in? %>
+    <div class="jumbotron">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="display-4">Welcome To....</h1>
+                <h1 class="font-weight-bold">Bored? Games</h1>
+                <p class="lead">Find all kinds of AMAZING games new and old!</p>
+                <hr class="my-4">
+                <p>Have fun!</p>
+                <p class="lead">
+                <%= link_to 'ADD GAME', new_game_path, class:"btn btn-primary btn-lg" %>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <%= image_tag "heroimage", class: "home-image"%>
+            </div>
         </div>
     </div>
-</div>
+<% end %>
 

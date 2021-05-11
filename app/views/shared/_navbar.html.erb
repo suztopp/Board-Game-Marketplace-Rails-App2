@@ -5,21 +5,24 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <ul class="navbar-nav mr-auto">
         <li class="nav-item">
           <%= link_to 'Home', root_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
           <%= link_to 'Games', games_path, class: "nav-link" %>
         </li>
-      </ul>
+        </ul>
+        <ul class="form-inline my-2 my-lg-0">
       <span class="navbar-text">
-        <%= link_to 'Sign Up!', user_session_path, class:"btn btn-info" %>
         <% if user_signed_in? %>
-        <%= link_to 'Log In', new_user_session_path, class:"btn btn-info" %>
-        <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class:"btn btn-info" %>
+          <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class:"btn btn-info" %>
+        <% else %>
+          <%= link_to 'Log In', new_user_session_path, class:"btn btn-info" %>
+          <%= link_to 'Sign Up!', new_user_registration_path, class:"btn btn-info" %>
         <% end %>
       </span>
+      </ul>
     </div>
   </div>
 </nav>
