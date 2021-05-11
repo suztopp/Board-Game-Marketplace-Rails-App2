@@ -10,11 +10,11 @@
     <%= f.input :price %>
     <%= f.input :available %>
     <%= f.input :players %>
-    <%= f.input :age_group %>
-    <%= f.input :genre %>
+    <%= f.input :age_group, collection: ['Kids', 'Young Adults', 'Adults', 'All Ages'] %>
+    <%= f.input :genre, collection: ['Puzzle', 'For Kids', 'Money', 'Words', 'Party'] %>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class:"btn btn-primary btn-lg" %>
   </div>
 <% end %>
