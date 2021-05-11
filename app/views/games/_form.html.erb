@@ -1,0 +1,20 @@
+
+<%= simple_form_for(@game) do |f| %>
+  <%= f.error_notification %>
+  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :description %>
+    <%= f.input :publication %>
+    <%= f.input :price %>
+    <%= f.input :available %>
+    <%= f.input :players %>
+    <%= f.input :age_group %>
+    <%= f.input :genre %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
